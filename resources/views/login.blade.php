@@ -2,20 +2,22 @@
 @section('content')
 <div class="container">
    <div class="row justify-content-center mt-5">
-      <div class="col-sm-4 col-sm-offset-3">
+      <div class="col-sm-4 ">
 
-
-      <form>
+      <div class="card " style="background: lightgrey;">
+      <form class="mx-3 mt-3" action="{{url('login')}}" method="post">
+      @csrf
             <!-- Email input -->
             <div class="form-outline mb-4">
-              <input type="email" id="form2Example1" class="form-control" />
-              <label class="form-label" for="form2Example1">Email address</label>
+            
+              <input type="email" name="email" id="email" class="form-control" />
+              <label class="form-label" name="email" for="email">Email address</label>
             </div>
 
             <!-- Password input -->
             <div class="form-outline mb-4">
-              <input type="password" id="form2Example2" class="form-control" />
-              <label class="form-label" for="form2Example2">Password</label>
+              <input type="password" name="password" id="password" class="form-control" />
+              <label class="form-label" for="password">Password</label>
             </div>
 
             <!-- 2 column grid layout for inline styling -->
@@ -35,7 +37,7 @@
             </div>
 
             <!-- Submit button -->
-            <button type="button" class="btn btn-primary btn-block mb-4">Sign in</button>
+            <button type="submit" class="btn btn-primary btn-block mb-4">Login</button>
 
             <!-- Register buttons -->
             <div class="text-center my-1">
@@ -57,6 +59,8 @@
               </button>
             </div>
           </form>
+
+          </div>
 
 
       </div>
